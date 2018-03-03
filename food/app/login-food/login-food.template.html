@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<div class=" article-div">
+    <div class="article-div-div">
+
+        <div>
+            <h3 class="nl_title">
+                <span class="nl_t_left"></span>
+                登录冷链物流系统
+                <span class="nl_t_right"></span>
+            </h3>
+        </div>
+
+        <form action="/app/index.html" method="post" class="form-horizontal" id="login_form">
+             <div class="login_regist_div"  style="width: 360px;margin: auto">
+                 <p class="mt5 mb20">登录到你的账户.</p>
+                 <input name="username" id="userId" type="text" style="height: 46px" class="form-control uname " placeholder="请输入用户名" ng-blur="checkPhone()" ng-model="name"/>
+                 <div class="text-danger" id="text-login-name" ng-bind="nameWarning"></div>
+                 <input name="password" id="userPassworld" type="password" style="height: 46px" class="form-control pword" placeholder="请输入密码" ng-blur="checkPassword()" ng-model="password"/>
+                 <div class="text-danger" id="text-login-password" ng-bind="passwordWarning"></div>
+                 <div class="text-danger"> </div>
+                 <br>
+                 <div class="container-fluid" style="height: 43px">
+                     <div class="row">
+                         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 registBtn hand" ng-click="login()">登录</div>
+                         <div ui-sref="regist" class="col-xs-9 col-sm-9 col-md-9 col-lg-9 on_go">还没有账号？免费注册 ∨</div>
+                     </div>
+                 </div>
+             </div>
+        </form>
+    </div>
+</div>

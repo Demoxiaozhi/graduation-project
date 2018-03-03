@@ -1,0 +1,261 @@
+.dishDetails-container01{
+    width:74%;
+    background-color: white;
+}
+/*菜品图片*/
+.dish-introduce .row-left{
+    padding:0px;
+}
+.dish-introduce .row-left img{
+    height:300px!important;
+}
+.dish-introduce .menu-photo{
+    display: none;
+}
+/*菜品名称*/
+.dish-introduce .row-right h2{
+    margin-top: 25px;
+}
+/*收藏量/点赞量*/
+/*几个时间*/
+.time-row{
+    margin-top:0px;
+}
+.time-row span {
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.time-row .list-inline li span img{
+    margin-bottom:20px;
+}
+/*end*/
+@media (max-width: 850px){
+    .dish-introduce .row-left img{
+        display:none;
+    }
+    .dish-introduce .menu-photo{
+        display: block;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    .dish-introduce .col-xs-6{
+        width:100%;
+    }
+}
+@media (min-width: 1090px) and (max-width: 1200px){
+    .row-right{
+        margin-left:-45px ;
+    }
+}
+@media (max-width: 1140px){
+    .time-row .list-inline li:nth-child(2),li:nth-child(3) span img{
+        margin-top:-3px;
+    }
+}
+@media (min-width: 835px) and (max-width:1170px ){
+    .dish-introduce .time-row div{
+        padding-top: 0px;
+        margin-top:-20px;
+    }
+}
+/*stroy及用料*/
+.dishDetails-container02{
+    width:74%;
+    margin-top: 25px;
+}
+/*stroy-row/用料*/
+.dishDetails-container02 .stroy-row{
+    background-color: white;
+    padding-top: 15px;
+}
+.stroy-row h3{
+    display: block;
+    border-bottom: solid 1px #eee;
+    text-indent: 21px;
+    height:50px;
+    line-height: 50px;
+}
+.dishDetails-container02 .stroy-row p{
+    padding-left: 15px;
+    color: #0f0f0f;
+}
+/*主辅料文字样式*/
+.stroy-row h5{
+    border:solid 1px transparent;
+    text-align: center;
+    width:45px;
+    height:23px;
+    font-size: 12px;
+    margin-left:24px;
+    line-height:23px;
+}
+.stroy-row .h1{
+    background-color: #FF3232;
+    color:white;
+    margin-bottom: -8px;
+}
+.stroy-row .h2{
+    background-color: #F5F5F5;
+    color:#9E9B99;
+    margin-top: 0px;
+}
+.stroy-row  .main-row  li{
+    margin-top: 15px;
+}
+.stroy-row .main-row li span:nth-child(2){
+    margin-left:95px ;
+}
+.stroy-row .second-row li span:nth-child(2){
+    margin-left:-5px ;
+}
+/*共用*/
+.stroy-row  li span:nth-child(2){
+    pointer-events: none;
+}
+@media (max-width: 980px){
+    .main-row li:first-child  span:last-child{
+        margin-left: 108px!important;
+    }
+    .second-row li span:last-child{
+        margin-left:0px!important;
+    }
+}
+/*step-row */
+.step-row{
+    margin-top: 15px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+.step-row h4{
+    height:45px;
+    line-height: 45px;
+    border-bottom: solid 1px lightgray;
+}
+.step-row span[id^="step_num"]{
+   font-size: 25px;
+    font-family: Calibri;
+    color: red;
+}
+.step-row img{
+    padding-left:5px;
+    width:200px;
+}
+.step-row .media{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed lightgray;
+}
+/*comment-row*/
+.comment-row{
+    margin-top: 25px;
+    padding-top: 15px;
+    background-color: white;
+}
+.comment-row .col-lg-9{
+    margin-left:15px;
+}
+.comment-row  img{
+    width:48px;
+}
+@media (max-width: 980px){
+    .comment-row .col-lg-9{
+        margin-left:-5px!important;
+    }
+}
+.comment-row ul hr{
+    margin-top: 0px;
+}
+.comment-row ul li img{
+    margin-bottom:45px;
+}
+.comment-row button[type=button]{
+    outline: none;
+    background-color: red;
+    border:none;
+}
+.comment-row ul li:last-child{
+    margin-left: 15px;
+}
+.comment-row ul hr{
+    margin-top: -20px;
+}
+    /*发布者*/
+.publishUser-row{
+    border-radius: 5px;
+    padding-top: 15px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+.publishUser-row  img{
+    width:65px;
+}
+.publishUser-row span{
+    color:#7a7a7a;
+}
+/**/
+.web-row{
+    margin-top: 20px;
+    padding-top: 15px;
+    background-color: white;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.web-row img{
+    width:60px;
+}
+.web-row span{
+    font-size: 14px;
+}
+/*排行榜*/
+.ranking-row{
+    margin-top: 15px;
+    background-color: white;
+}
+.dishDetails-container02 .ranking-row ul{
+    width:90%;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.dishDetails-container02 .ranking-row ul li+li{
+   margin-top: 11px;
+}
+.dishDetails-container02 .ranking-row ul img{
+    width:110px;
+    height:80px;
+    pointer-events: none;
+    margin-left: 0px;
+}
+.dishDetails-container02 .ranking-row h5{
+    margin-left: 10px;
+    line-height: 40px;
+}
+.dishDetails-container02 .ranking-row ul li span[id^="push_dish_name"]{
+    margin-left: 10px;
+}
+.dishDetails-container02 .ranking-row ul li span[id^="push_dish_name"]:hover{
+    color: red;
+    text-decoration: underline;
+}
+.dishDetails_more{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.dishDetails_more span{
+   font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.dish_tui_j{
+    padding: 1px!important;
+    border:none;
+    border-radius: 0px;
+}
+.dish_tui_j h5:hover{
+    color:red;
+}
+.dish_tui_j:hover{
+    border-radius: 5px;
+    border-top: none;
+    box-shadow:0px 3px 18px 2px #b5b5b5;
+}
+

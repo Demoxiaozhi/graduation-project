@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<div class="topicDetails_bigdiv">
+    <div class="topicDetails_contdiv">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 topicDetails_tit_top">
+                    <h4>话题> 健康 > #饮食小常识# #养生妙方# #饮食新闻#</h4>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid">
+
+            <div class="topicDetails_left">
+                <div class="topicDetails_left_top">
+                    <div class="topicDetails_left_top_firstdiv">
+                        <span ng-bind="topic_name"></span>
+                    </div>
+                    <div class="container-fluid topicDetails_collect_author">
+                        <div class="row">
+                            <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 topicDetails_author">
+                                <img src="http://localhost:3009/uploads/{{head_photo}}" alt="" class="img-circle" style="pointer-events: none">&nbsp;&nbsp;&nbsp;
+                                作者:<span style="color: red" id="topic_publish_user"  ng-bind="user_sname" style="color: blue; cursor: pointer" ng-click="pass()"></span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9C9F9F" ng-bind="topic_publish_time | date:'yyyy-MM-dd HH:mm:ss'"></span></span>
+                            </div>
+                            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+                                <div style="margin-top: -20px">
+                                    <act-topic-collect-page></act-topic-collect-page>
+                                    <act-topic-thumb-page></act-topic-thumb-page>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--话题详情区-->
+                <div class="container-fluid topicDetails_left_middle">
+                    <div class="original_log_text" ng-bind-html="topichtml"></div>
+                </div>
+                <!--结束话题内容区-->
+                <div class="container-fluid topicDetails_left_bottom">
+                    <div class="row  topic-comment-row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                                <span style="pointer-events: none">
+                                    <img src="http://localhost:3009/uploads/{{topicDetails_user_headphoto}}" alt="">
+                                </span>
+                                </div>
+                                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label>发表评论</label>
+                                            <textarea class="form-control" rows="3" ng-model="OneTopicComment"></textarea>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <button type="button" class="btn btn-danger" ng-click="addOneTopicComment()">发表</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--结束评论框-->
+                            <!--评论区-->
+                            <h4>评论</h4>
+                            <hr style="margin-top: 0px">
+                            <!--具体评论-->
+                            <ul class="list-inline" ng-repeat="part in topicDetails_topic_comment | limitTo:number">
+                                <li>
+                                    <img src="http://localhost:3009/uploads/{{part.head_photo}}" alt="" style="pointer-events: none">
+                                </li>
+                                <li>
+                                    <span id="publish_comment_user01" style="font-size: 13px;" ng-bind="part.user_sname"></span>
+                                    <h6 title="评论" id="comment_content01" ng-bind="part.comment_content"></h6>
+                                    <span style="color: #898989;;">
+                                     <span id="publish_comment_time01" ng-bind="part.comment_time | toDate |date :'yyyy-MM-dd HH:mm:ss'"></span>
+                                 </span>
+                                </li>
+                                <hr>
+                            </ul>
+                            <!--结束具体评论-->
+                        </div>
+                        <div style="text-align: center;margin-bottom: 15px">
+                            <span ng-click="number=number+3"class="hand" >查看更多评论</span>
+                        </div>
+                    </div>
+                </div>
+                <!--结束评论-->
+            </div>
+            <!--结束话题内容左侧区-->
+            <div class="topicDetails_right">
+                <div style="pointer-events: none">
+                    <img src="images/topicDetails-food/meishijie.png" alt="">
+                </div>
+                <div style="text-align: center;padding-top: 30px">
+                    <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+                        IOS版下载
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                        安卓版下载
+                    </button>
+                </div>
+                <!--最新/热话题-->
+                <div class="row most-row" style="padding-top: 10px">
+                    <!--<div class="col-xs-12 col-md-12">-->
+                        <!--<a href="#" class="thumbnail">-->
+                            <!--<img src="images/topic/topic01.jpg" alt="...">-->
+                            <!--<strong>清蒸皮皮虾</strong>-->
+                            <!--<p>眼下可是皮皮虾最肥的时候，开整！</p>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--最新话题推送-->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 most-new" style="background-color: white">
+                        <div>
+                            <ul class="list-inline" style="margin-top: 10px">
+                               <li>
+                                   <h4>最新话题</h4>
+                               </li>
+                               <li style="margin-left: 45px">
+                                   <span  ui-sref="topic" class="hand">更多</span>
+                               </li>
+                            </ul>
+
+                            <!--1-->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_new_topic01.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>6种酱油怎么吃更营养？</b></h5>
+                                    <span>酱油，这种调味料是厨房最常见的，每个人都...</span>
+                                </div>
+                            </div>
+                            <!--2-->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_new_topic02.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>橘子吃多变“小黄人”？</b></h5>
+                                    <span>作为“大吃货帝国”的一员，我们总能看到很多...</span>
+                                </div>
+                            </div>
+                            <!--3-->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_new_topic03.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>四个喝豆浆误区不能犯</b></h5>
+                                    <span>如果你是个爱美的女生，想要瘦瘦小肚子，...</span>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_new_topic04.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>缓解秋乏的6种食物</b></h5>
+                                    <span>如今，随着时间的推移，秋困的症状越来越明显了...</span>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_new_topic05.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>饥饿时刻要“挑食”</b></h5>
+                                    <span>饥饿时，人的食欲会愈发强烈，看到食物...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <!--结束最新话题-->
+                    <!--分隔-->
+                    <div>&nbsp;</div>
+                    <div style="background-color: white">
+                        <span style="display:block;padding: 15px;font-size: 15px">更多内容，随你点击，即：如期而至</span>
+                        <img src="images/topicDetails-food/most_slice01.jpg" alt="">
+                    </div>
+                    <!--最热话题推送-->
+                    <div>&nbsp;</div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 most-hot" style="background-color: white">
+                        <div>
+                            <ul class="list-inline" style="margin-top: 10px">
+                                <li>
+                                    <h4>最热话题</h4>
+                                </li>
+                                <li style="margin-left: 45px">
+                                    <span  ui-sref="topic" class="hand">更多</span>
+                                </li>
+                            </ul>
+
+                            <!--1-->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_hot_topic01.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>为何有的鱼刺少有的多？</b></h5>
+                                    <span>鱼刺的学名，叫肌间骨，它是分布于鱼类...</span>
+                                </div>
+                            </div>
+                            <!--2-->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_hot_topic02.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>方便面谣言破除</b></h5>
+                                    <span>提起方便面，人们自然而然地会将其归类在...</span>
+                                </div>
+                            </div>
+                            <!--3-->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_hot_topic03.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>生肉该如何进行清洗</b></h5>
+                                    <span>很多人都知道生肉不能吃，那么在购买...</span>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_hot_topic04.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>隔夜菜如砒霜吃不得？</b></h5>
+                                    <span>晚上做的饭菜吃不完怎么办?很多人会放入冰箱...</span>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/topicDetails-food/most_hot_topic05.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><b>10种饮食恶习 见招拆招</b></h5>
+                                    <span>随着社会生活的发展，我们已不再能控制自己...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <!--结束最热话题-->
+                </div>
+
+                <!--结束最话题-->
+            </div>
+        </div>
+        <!--内容及评论区-->
+    </div>
+    <!--结束所有内容区-->
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+</div>

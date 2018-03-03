@@ -1,0 +1,67 @@
+.message_bigdiv{
+    width: 100%;
+    padding-bottom: 50px;
+    background-color: #FAE8C8;
+}
+.message_contdiv{
+    width: 76%;
+    margin: auto;
+}
+.message_tittop{
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    min-width: 500px;
+}
+.message_top{
+    height: 70px;
+    line-height: 70px;
+    min-width: 500px;
+    background-color: white;
+}
+.message_middle{
+    min-width: 500px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #FAFAFA;
+    /*border: solid 1px #2ea426;*/
+}
+.message_middle li{
+    list-style: none;
+}
+.message_middle select{
+    padding: 0.5em;
+    /*padding-top: 0px;*/
+    font-size: 12px;
+    line-height: 1.2em;
+    background: #FFFFFF;
+}
+.nav-pills li{
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.line{
+    border-bottom: 1px solid  #E2E2E2;
+}
+.photo-btn{
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    display: inline-block;
+    background-color: #E2E2E2;
+    border: 1px solid #A9A9A9;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+ul li .password-text{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.nav-pills li:hover{
+    background-color: #F8F8F8;
+    cursor: pointer;
+}

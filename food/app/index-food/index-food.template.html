@@ -1,0 +1,88 @@
+<div class="con">
+    <!--start轮播-->
+    <div id="slider_show" class="carousel slide">
+        <!-- 设置图片轮播的顺序 -->
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#slider_show" data-slide-to="0"></li>
+            <li data-target="#slider_show" data-slide-to="1"></li>
+            <li data-target="#slider_show" data-slide-to="2"></li>
+        </ol>
+        <!-- 设置轮播图片 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/slider.jpg" alt="" ui-sref="about">
+                <!--<a href=""><img src="images/slider.jpg" alt=""></a>-->
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/slider.jpg" alt="" ui-sref="about">
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/slider.jpg" alt="" ui-sref="about">
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end轮播-->
+    <div class="con_div">
+        <!--展示部分冷链物流系统冷藏车-->
+        <div class="container-fluid index-container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title">
+                    <h3>冷链物流系统冷藏车</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="part in parts_month_dish">
+                    <div class="thumbnail appropriate_menu">
+                        <img ui-sref="dishDetails" src="http://localhost:3009/images/dishPic/{{part.dish_photo}}" alt="" ng-click="dish_details(part.dish_id)" class="hand">
+                        <div class="caption">
+                            <h4 ng-bind="part.dish_name" class="hand dish-title" ui-sref="dishDetails" ng-click="dish_details(part.dish_id)" ></h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--结束展示部分冷链物流系统冷藏车-->
+
+        <!--展示部分冷链物流系统冷库-->
+        <div class="container-fluid index-container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">&nbsp;</div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 title">
+                    <h3>冷链物流系统冷库</h3>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 title">
+                    <div class="nh" id="nh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="nav-color hand" ng-click="column='publish_time';desc=true" >最新</span> &nbsp;&nbsp;
+                        <span class="hand" ng-click="column='dish_click';desc=true">最热</span>&nbsp;&nbsp;
+                        <span class="hand" ui-sref="menu">更多冷库>></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"  ng-repeat="part in parts_new_dish |orderBy:column:desc|limitTo:8">
+                    <div class="thumbnail index_lengku" style="padding: 0">
+                        <img ui-sref="topicDetails" src="http://localhost:3009/upload_dish_pics/{{part.dish_photo}}" alt="" ng-click="topic_details(part.dish_id)" class="hand">
+                        <div class="caption">
+                            <h4 ng-bind="part.dish_name" class="hand dish-title" ></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--结束展示部分冷链物流系统冷库-->
+    </div>
+</div>

@@ -1,0 +1,61 @@
+.topicRelease_bigdiv{
+    width: 100%;
+    background-color: #FAE8C8;
+}
+.topicRelease_contdiv{
+    width: 85%;
+    margin: auto;
+}
+.topicRelease_tit_top{
+    text-align: left;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.topicRelease{
+    background-color: white;
+    width:76%;
+}
+.topicRelease_title_select{
+    height: 46px;
+    margin-top: 20px;
+    width: 100%;
+    color: #8a8a8a;;
+    border: solid 1px #DDDDDD;
+}
+.topicRelease_text{
+    width: 80%;
+    height: 46px;
+    padding-left: 10px;
+    border: solid 1px #DDDDDD;
+    margin-top: 20px;
+}
+.topicRelease_button{
+    width: 160px;
+    height: 60px;
+}
+.htmleaf-container{
+    margin: 0 auto;
+}
+.topicRelease_input{
+    width: 100%;
+    min-height: 300px;
+    margin-top: 20px;
+    border: 1px solid gainsboro;
+    /*border-radius: 10px;*/
+    padding: 10px;
+    outline: none;
+    text-align: left;
+}
+.topicRelease_input_pic{
+    width: 70px;
+    height: 30px;
+    color:white;
+    line-height: 30px;
+    text-align: center;
+    float: right;
+    margin-top: 13px;
+    margin-bottom: 15px;
+    background: #e90808;
+    border-radius: 5px;
+    cursor: pointer
+}

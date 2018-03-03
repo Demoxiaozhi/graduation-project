@@ -1,0 +1,26 @@
+{
+  "name": "h5",
+  "authors": [
+    "cuijiajia <3054833457@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.4",
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7",
+    "ng-file-upload-shim": "^12.2.13",
+    "ng-file-upload": "^12.2.13",
+    "ngImgCrop":"latest",
+    "angular-messages":"latest"
+  }
+}

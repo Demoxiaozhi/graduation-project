@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<div class="fv_food_big_div">
+    <div class="fv_food_cont_div">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fv_food_cont_tit_top">
+                    <h4>首页 > 菜谱大全 > 食材百科 > {{fv_food_name}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="row fv_food_middle">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <div style="margin-left: -15px">
+                            <img src="http://localhost:3009/images/fv/{{fv_food_uicon}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 fv_food_name">
+                        <div>
+                            <h3 ng-bind="fv_food_name"></h3>
+                        </div>
+                        <div>
+                            <span>【果蔬别名】:</span>
+                            <h5 ng-bind="fv_food_sname"></h5>
+                        </div>
+                        <div>
+                            <span>【食用药效】:</span>
+                            <h5 ng-bind="fv_food_effect"></h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 fv_food_name">
+                        <div>
+                            <h3 ng-bind="fv_food_name" style="visibility: hidden"></h3>
+                        </div>
+                        <div>
+                            <span>【适宜人群】:</span>
+                            <h5 ng-bind="fv_food_right_person"></h5>
+                        </div>
+                        <div>
+                            <span>【禁忌人群】:</span>
+                            <h5 ng-bind="fv_food_no_person"></h5>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="photo-btn" ng-click="hello()">当前头像</div>-->
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fv_food_cont_tit_middle">
+                        <h3 >{{fv_food_name}}的做法大全</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3" ng-repeat="part in parts |fenye:pageIndex ">
+                        <div class="thumbnail fv_food_photo">
+                            <img src="http://localhost:3009/images/dishPic/{{part.dish_photo}}" alt="">
+                            <div class="caption">
+                                <h4 ng-bind="part.dish_name"></h4>
+                                <span ng-bind="'评论量：'+part.dish_count"></span>&nbsp;&nbsp;
+                                <span ng-bind="'人气：'+part.dish_click"></span>
+                                <p class="author" ng-bind="part.user_sname"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <nav aria-label="Page navigation" style="text-align: center">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li ng-repeat="i in page_count_arr"><a href="javascript:void(0)" ng-click="change(i)">{{i}}</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

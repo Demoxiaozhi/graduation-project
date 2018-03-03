@@ -1,0 +1,36 @@
+.footer-css{
+    background-color: #3F3A32;
+    width: 100%;
+}
+.footer-css-div{
+    width: 76%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer_jpg img {
+    height: 60px;
+}
+.footer-css-txt {
+    color: #e6e6e6;
+    font-size: 2rem;
+}
+.footer-css-stxt div{
+    color: #999999;
+    font-size: 10px;
+    text-align: center;
+}
+ .fixed .gotoTop{
+    color: white;
+    width: 60px;
+    height: 60px;
+    line-height:60px;
+    text-align:center;
+    font-size:30px;
+    background-color:darkgrey;
+    opacity: 0.3;
+}
+ .fixed .gotoTop:hover{
+     background-color:darkgrey;
+     opacity: 0.6;
+ }

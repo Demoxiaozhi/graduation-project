@@ -1,0 +1,251 @@
+<div class="topic-container">
+    <div class="topic_div_food">
+        <div class="text-center topic_Title">
+            <span>有人的地方才有力量</span>
+        </div>
+        <!--子导航条/topic-container01-->
+        <div class="container-fluid topic-container01">
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 topic_sort">
+                    <ul class="nav nav-pills">
+                        <!--<li role="presentation" ng-click="xTopicType(0)"><a href="" style="color: #666;margin-left: -16px">全部</a></li>-->
+                        <li role="presentation" ng-repeat=" t in topic_types" ng-click="xTopicType($index+1)"><a href="" style="color: #666">{{t}}</a></li>
+                    </ul>
+                </div>
+                <!--搜索框-->
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 search-row">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜索话题" ng-model="topic_search">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="Sou_suo(topic_search)">Go</button>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--结束子导航条-->
+        <!--图片轮播区-->
+        <div class="container-fluid topic-container02" style="min-width: 530px">
+            <div class="row">
+                <!--topic-container02 /左侧区域-->
+                <div class="col-xs-7 col-sm-7 col-md-8 col-lg-9">
+                    <!--start轮播-->
+                    <div id="slidershow" class="carousel slide" style="margin-left: -15px">
+                        <!-- 设置图片轮播的顺序 -->
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#slidershow" data-slide-to="0"></li>
+                            <li data-target="#slidershow" data-slide-to="1"></li>
+                            <li data-target="#slidershow" data-slide-to="2"></li>
+                        </ol>
+                        <!-- 设置轮播图片 -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/topic/lunbo_001.jpg" alt="" ui-sref="topicDetails" ng-click="lun_bo(46)">
+                                <!--<a href=""><img src="http://images3.c-ctrip.com/rk/201407/ll580x145.jpg" alt=""></a>-->
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/topic/lunbo_002.jpg" alt="" ui-sref="topicDetails" ng-click="lun_bo(45)">
+                                <!--<a href=""><img src="http://images3.c-ctrip.com/dj/201408/zj/zj_580145.jpg" alt=""></a>-->
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/topic/lunbo_003.jpg" alt="" ui-sref="topicDetails" ng-click="lun_bo(44)">
+                                <!--<a href=""><img src="http://images3.c-ctrip.com/dj/201408/zqgq_580145.jpg" alt=""></a>-->
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end轮播-->
+                    <!--话题区域-->
+                    <div class="topicShow-row row" style="margin-right: 0px;">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row topicShow-title">
+                                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+                                    <ul class="list-inline">
+                                        <li style="margin-bottom: -5px">话题</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-7 col-sm-8 col-md-8 col-lg-8 text-right" id="topic_order">
+                                    <span  class="topic_orders hand" ng-click="column='topic_publish_time';desc=!desc">最新</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span  ng-click="column='topic_count';desc=!desc" class="hand">最热</span>
+                                </div>
+                            </div>
+                            <hr style="margin-top: 0px">
+                            <!--开始话题内容-->
+                            <!--<div class="row topic-content" ng-repeat="part in topic_show | orderBy:column:desc " style="border-bottom: dashed 1px lightgray;margin-left: 5px;margin-right: 3px">-->
+                            <!--<div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">-->
+                            <!--<div class="topic-view" style="text-align: center;margin-top: 25px">-->
+                            <!--<span id="view_num" ng-bind="part.topic_count"></span><br>-->
+                            <!--<span>浏览</span>-->
+                            <!--</div>-->
+                            <!--<div>&nbsp</div>-->
+                            <!--</div>-->
+                            <!--<div class="col-xs-9 col-sm-10 col-md-10 col-lg-11">-->
+                            <!--<div class="content" style="margin-top: 24px">-->
+                            <!--<h4 class="topic-title" ng-bind="part.topic_name" ng-click="topic_show_details(part.topic_id)" ui-sref="topicDetails"></h4>-->
+                            <!--<p style="font-size: 15px" class="hand" ng-bind="part.topic_content | limitTo:40" ng-click="topic_show_details(part.topic_id)" ui-sref="topicDetails"></p>-->
+                            <!--<span id="publish_details">-->
+                            <!--发帖人：<span ng-bind="part.user_sname"></span>&nbsp;&nbsp;-->
+                            <!--发布时间：<span style="pointer-events: none" ng-bind="part.topic_publish_time | date:'yyyy-MM-dd HH:mm:ss'"></span><br>-->
+                            <!--<span>&nbsp;</span>-->
+                            <!--</span>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <div class="row topic-content" ng-repeat="part in newtopics_topic_type | orderBy:column:desc | fen_ye:pageIndex" style="border-bottom: dashed 1px lightgray;margin-left: 5px;margin-right: 3px">
+                                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">
+                                    <div class="topic-view" style="text-align: center;margin-top: 25px">
+                                        <span id="view_num" ng-bind="part.topic_comment"></span><br>
+                                        <span>浏览</span>
+                                    </div>
+                                    <div>&nbsp</div>
+                                </div>
+                                <div class="col-xs-9 col-sm-10 col-md-10 col-lg-11">
+                                    <div class="content" style="margin-top: 24px">
+                                        <h4 class="topic-title" ng-bind="part.topic_name" ng-click="topic_show_details(part.topic_id)" ui-sref="topicDetails"></h4>
+                                        <p style="font-size: 15px" class="hand" ng-bind="part.topic_content | limitTo:40" ng-click="topic_show_details(part.topic_id)" ui-sref="topicDetails"></p>
+                                        <span id="publish_details">
+                                        发帖人：<span ng-bind="part.user_sname"></span>&nbsp;&nbsp;
+                                        发布时间：<span style="pointer-events: none" ng-bind="part.topic_publish_time | date:'yyyy-MM-dd HH:mm:ss'"></span><br>
+                                        <span>&nbsp;</span>
+                                   </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <nav aria-label="Page navigation" class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void 0" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li ng-repeat="c in page_count_arrs"><a href="javascript:void(0)" ng-click="change_topic(c)">{{c}}</a></li>
+                                    <li>
+                                        <a href="javascript:void 0" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--结束话题内容区-->
+                </div>
+                <!--右侧区域-->
+                <div class="col-xs-5 col-sm-5 col-md-4 col-lg-3  topic-ranking">
+                    <!--发布新话题-->
+                    <div class="media">
+                        <div class="media-left" style=" padding-top: 10px;">
+                            <img class="media-object" src="images/topic/new-topic.PNG" alt="..." class="img-circle" style="pointer-events: none">
+                        </div>
+                        <div class="media-body">
+                            <span>&nbsp;</span><br>
+                            <span>想寻找更多乐趣？点击发布，与大家一起交流吧</span>
+                        </div>
+                    </div>
+                    <div class="new-topic" style="margin-top: 10px">
+                        <div class="hand" style="margin: auto" ui-sref="topicRelease">
+                            发布新贴
+                        </div>
+                    </div>
+                    <!--结束发布新帖-->
+                    <!--排行榜-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h4 style="margin-top:25px ">人气排行榜</h4>
+                            <div>
+                                <span style="pointer-events: none"><img src="images/topic/topic_ranking01.png" alt=""></span>
+                                <span id="hot-topic01">当“世界那么大”，遇上”...</span>
+                            </div>
+                            <!--2-->
+                            <div>
+                                <span style="pointer-events: none"><img src="images/topic/topic_ranking02.png" alt=""></span>
+                                <span id="hot-topic02">当“世界那么大”，遇上”...</span>
+                            </div>
+                            <!--3-->
+                            <div>
+                                <span style="pointer-events: none"><img src="images/topic/topic_ranking03.png" alt=""></span>
+                                <span id="hot-topic03">当“世界那么大”，遇上”...</span>
+                            </div>
+                            <!--4-->
+                            <div class="span-css">
+                                <span style="pointer-events: none">4.</span>
+                                <span id="hot-topic04">当“世界那么大”，遇上”...</span>
+                            </div>
+                            <!--5.-->
+                            <div class="span-css">
+                                <span style="pointer-events: none">5.</span>
+                                <span id="hot-topic05">当“世界那么大”，遇上”...</span>
+                            </div>
+                            <!--6-->
+                            <div class="span-css">
+                                <span style="pointer-events: none">6.</span>
+                                <span id="hot-topic06">当“世界那么大”，遇上”...</span>
+                            </div>
+                            <!--7-->
+                            <div class="span-css">
+                                <span style="pointer-events: none">7.</span>
+                                <span id="hot-topic07">当“世界那么大”，遇上”...</span>
+                            </div>
+                            <!--8-->
+                            <div class="span-css">
+                                <span style="pointer-events: none">8.</span>
+                                <span id="hot-topic08">当“世界那么大”，遇上”...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--排行截断区-->
+                    <div class="row" style="margin-top: 25px;margin-bottom: 20px">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="margin-top:21px;pointer-events: none ">
+                            <img src="images/topic/topic-ranking-hr.jpg" alt="">
+                        </div>
+                        <div class="col-xs-10 col-sm-9 col-md-9 col-lg-9 ranking-word" style="margin-top: 20px;">
+                            <span style="margin-bottom: 5px">一日三餐，健康是关键</span>
+                            <hr style="margin-left:0px;margin-top: 0px">
+                        </div>
+                    </div>
+                    <!--结束排行截断区--->
+                    <div class="row" style="margin-bottom: 20px">
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <h4 style="margin-top: 10px">发帖达人排行榜</h4>
+                            <div  style="pointer-events: none">
+                                <span><img src="images/topic/topic_ranking01.png" alt=""></span>
+                                <span>小叮当</span>
+                            </div>
+                            <!--2-->
+                            <div  style="pointer-events: none">
+                                <span><img src="images/topic/topic_ranking02.png" alt=""></span>
+                                <span>自由飞翔</span>
+                            </div>
+                            <!--3-->
+                            <div  style="pointer-events: none">
+                                <span><img src="images/topic/topic_ranking03.png" alt=""></span>
+                                <span>小能豆</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--结束右侧区域-->
+        </div>
+        <!--结束topic-container02-->
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+    </div>
+    </div>
+</div>

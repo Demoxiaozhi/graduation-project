@@ -1,0 +1,117 @@
+
+.intruduce-div{
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 14px;
+}
+/*.intruduce-div .pic{*/
+    /*border: none;*/
+/*}*/
+.step_pic{
+    /*background: url("../images/dishRelease/smallUploadPic.png") center no-repeat;*/
+    background-image: url("../images/dishRelease/smallUploadPic.png");
+    /*border: none!important;*/
+    background-size: 100% 100%;
+    height: 160px;
+    /*border: solid 1px black;*/
+    text-align: center;
+}
+.success_pic{
+    height: 100%;
+    margin-left: 15px;
+    background-size: 100% 100%;
+    background-image: url("../images/dishRelease/bigUploadPic.png");
+    background-repeat: no-repeat;
+}
+.success_pic img{
+    height: 100%
+}
+.dish-pad{
+    padding-left: 20px;
+}
+.dish-name-text{
+    width: 55%;
+    height: 46px;
+    padding-left: 10px;
+    border: solid 1px #DDDDDD;
+}
+.dish-select{
+    border: solid 1px #DDDDDD;
+    height: 46px;
+    margin-top: 20px;
+}
+.dish-text{
+    width: 100%;
+    height: 260px;
+    margin-top: 4px;
+    padding-top: 20px;
+    padding-left: 10px;
+    border: solid 1px #DDDDDD;
+}
+.dish-tip{
+    height: 80px;
+    background-color: #EEEEEE;
+    width: 93%;
+    margin: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.mainIng{
+    border: solid 1px #DDDDDD;
+    height: 46px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+.mainIng2{
+    border: solid 1px #DDDDDD;
+    height: 46px;
+    margin-top: 20px;
+    padding-left: 10px;
+    width: 120px;
+}
+.addIng{
+    width: 150px;
+    height: 46px;
+    line-height: 46px;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    background-color: #EAEAEA;
+    text-align: center;
+    display: inline-block;
+}
+.dish-pad h1{
+    color: #AAAAAA;
+}
+.top-text{
+    width: 80%;
+    height: 160px;
+    /*margin-top: 6px;*/
+    padding-top: 20px;
+    padding-left: 10px;
+    border: solid 1px #DDDDDD;
+}
+.addStep{
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    /*margin-left: 90px;*/
+    background-color: #EAEAEA;
+    text-align: center;
+    display: inline-block;
+}
+.btn1{
+    width: 160px;
+    height: 55px;
+    line-height: 60px;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    color: white;
+    font-size: 16px;
+    background-color: #FF3232;
+    text-align: center;
+}
+.btn1:hover{
+    background-color: #CD0C11;
+}

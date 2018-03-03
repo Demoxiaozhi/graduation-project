@@ -1,0 +1,17 @@
+<div ng-switch on="actIsFocus">
+    <div ng-switch-default>
+        <a href="javascript:void 0" ng-click="addFocus()">
+            <img src="images/dishDetails/focus01.png" alt="" style=" width: 25px">
+        </a>
+    </div>
+    <div ng-switch-when="true">
+        <a href="javascript:void 0" ng-click="deleteFocus()">
+            <img src="images/dishDetails/focus02.png" alt="" style=" width: 25px">
+        </a>
+    </div>
+    <div ng-switch-when="false">
+        <a href="javascript:void 0" ng-click="addFocus()">
+            <img src="images/dishDetails/focus01.png" alt="" style=" width: 25px">
+        </a>
+    </div>
+</div>

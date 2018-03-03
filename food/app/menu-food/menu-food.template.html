@@ -1,0 +1,111 @@
+<div class="menu-container">
+    <div>
+        &nbsp;
+    </div>
+    <!--container-css01（导航-菜分类)-->
+    <div class="container-fluid container-css01" style="min-width: 500px">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-css01">
+                <!--导航/大概分类-->
+                <div class="nav-title">
+                    <ul class="list-inline nav-big-title">
+                        <li class="active">家常菜谱</li>
+                        <li>中华菜系</li>
+                        <li>各地小吃</li>
+                        <li>外国菜谱</li>
+                        <li>烘焙</li>
+                        <li>厨房百科</li>
+                        <li>食材百科</li>
+                    </ul>
+                </div>
+                <!--分隔-->
+                       <h3> 家常菜谱</h3>
+                <hr>
+                <!--详细分类-->
+                  <div class="nav-child-title">
+                    <!--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >-->
+                        <ul class="list-inline nav-small-title" id="dish_type">
+                                <li ng-click="xdish_type(0)" class="active">全部</li>
+                                <li ng-repeat="dish in dish_type" ng-click="xdish_type($index+1)" ng-bind="dish"></li>
+                                <li>荤菜</li>
+                                <li>汤粥</li>
+                                <li>稀饭</li>
+                                <li>酱料蘸料</li>
+                                <li>微波炉</li>
+                                <li>火锅底料</li>
+                                <li>甜品点心</li>
+                                <li>糕点主食</li>
+                                <li>干果制作</li>
+                                <li>卤酱</li>
+                                <li>时尚饮品</li>
+                        </ul>
+                   </div>
+                <!--结束详细分类-->
+            </div>
+        </div>
+    </div>
+    <!--导航-菜分类end-->
+    <!--container-css02-->
+    <!--最新/最热-->
+    <div class="container-fluid container-css02" style="min-width: 500px">
+        <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-4 col-lg-4 col-lg-offset-4 col-md-offset-4 col-css02">
+                印象中的妈妈的味道
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-4 col-lg-4 col-css03" id="check">
+                <span  ng-click="column='publish_time';desc=true" class="active">最新</span>
+                <span style="color: lightgrey"> | </span>
+                <span ng-click="column='dish_click';desc=true">最热</span>
+            </div>
+        </div>
+    </div>
+    <!--end最新/最热-->
+    <!--菜品图片区/container-css03-->
+    <!--photo:first-->
+    <div class="container-fluid container-css03" style="min-width: 500px">
+        <div class="row row-third-contain01">
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" ng-repeat="part in newdishes_type | orderBy:column:desc |fenye:pageIndex">
+                <div class="thumbnail">
+                    <img class=" hand" src="http://localhost:3009/images/dishPic/{{part.dish_photo}}" alt="...">
+                    <div class="caption">
+                        <h4 ng-bind="part.dish_name" class="dish-title hand"></h4>
+                        <span ng-bind="'评论量：'+part.dish_count" style="pointer-events: none"></span>&nbsp;&nbsp;
+                        <span ng-bind="'人气：'+part.dish_click"></span>
+                        <p ng-bind="part.user_sname"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end菜品图片区-->
+    <!--分页开始/container-css04-->
+
+
+    <div class="container-fluid container-css04" style="min-width: 500px">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-lg-offset-3 col-sm-offset-3">
+                <nav aria-label="Page navigation" class="text-center">
+                    <ul class="pagination">
+                        <li>
+                            <a href="javascript:void 0" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li ng-repeat="i in page_count_arr"><a href="javascript:void 0" ng-click="change(i)">{{i}}</a></li>
+                        <li>
+                            <a href="javascript:void 0" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+<!--分页结束-->

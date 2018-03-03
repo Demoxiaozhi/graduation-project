@@ -1,0 +1,17 @@
+<div ng-switch on="actIsTopicCollect">
+    <div ng-switch-default>
+        <a href="javascript:void 0" ng-click="addTopicCollect()">
+            <img src="images/topicDetails-food/collect01.png" alt="" style=" width: 25px;margin-left:10px;margin-top: 30px">
+        </a>
+    </div>
+    <div ng-switch-when="true">
+        <a href="javascript:void 0" ng-click="deleteTopicCollect()">
+            <img src="images/topicDetails-food/collect02.png" alt="" style=" width: 25px;margin-left:10px;margin-top: 30px">
+        </a>
+    </div>
+    <div ng-switch-when="false">
+        <a href="javascript:void 0" ng-click="addTopicCollect()">
+            <img src="images/topicDetails-food/collect01.png" alt="" style=" width: 25px;margin-left: 10px;margin-top: 30px">
+        </a>
+    </div>
+</div>

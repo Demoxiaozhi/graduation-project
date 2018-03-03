@@ -1,0 +1,151 @@
+.topic-container{
+    background-color: #FAE8C8;
+    width:100%;
+    font-size: 100%;
+}
+.topic_div_food{
+    margin: auto;
+    width: 74%;
+}
+/*.topic-container01*/
+.topic_Title{
+    padding-top: 50px;
+    text-align: center;
+    min-width:445px;
+    font-size: 24px;
+}
+.topic-container01{
+    margin-top: 25px;
+    height: 70px;
+    background-color: white;
+}
+.topic_sort{
+    margin-top: 15px;
+}
+.topic_sort a{
+    font-size: 15px;
+}
+.topic_sort ul li{
+    background-color: white!important;
+}
+@media (max-width: 925px){
+    .topic_div_food{
+        width: 685px;;
+    }
+}
+.search-row{
+    margin-top: 18px;
+}
+/*/*.topic-container02*/
+.topic-container02{
+    margin-top:20px;
+}
+/*话题*/
+.topicShow-row {
+    background-color: white;
+    margin-top: 25px;
+}
+/*标题-话题*/
+.topicShow-title{
+    padding-top: 20px;
+}
+.topicShow-row  .topicShow-title .list-inline{
+    color: #FF6767;
+    margin-left: 18px;
+}
+.topicShow-row .topicShow-title .list-inline li{
+    font-size: 20px;
+}
+/*最新*/
+.topicShow-title .text-right {
+    padding-top:5px ;
+}
+/*话题内容*/
+.topicShow-row .topic-view{
+    font-size:11px ;
+    border:solid 1px #60A531;
+    padding: 10px;
+    width:51px;
+    height:51px;
+    color: #60A531;
+}
+.topicShow-row .topic-content{
+    margin-top:-15px;
+    margin-right: 0px;
+}
+.topicShow-row .topic-content .content h4{
+    color: #000;
+}
+.topicShow-row .topic-content .content h4:hover{
+    color:#FF6767;
+    cursor: pointer;
+    text-decoration: underline;
+ }
+.topicShow-row .topic-content .content{
+    margin-left: 10px;
+ }
+.topicShow-row .topic-content  .content span,p{
+    color: rgba(77, 77, 77, 0.85);
+}
+.topicShow-row .topic-content  .content p:hover{
+    color:black;
+}
+.topicShow-row .topic-content  .content span{
+    font-size:13px;
+}
+@media (min-width: 1000px) and (max-width: 1170px){
+    .topic-content  .content{
+        margin-left:-15px!important;
+    }
+}
+@media (max-width: 980px){
+    .topic-content .topic-view{
+        margin-left: 8px;
+    }
+    .topic-content  .content{
+        margin-left: 15px!important;
+    }
+}
+/*发布话题栏*/
+.topic-ranking{
+    background-color: white;
+}
+.topic-ranking .media img{
+    width:50px;
+}
+.topic-ranking .media-body{
+    font-size: 12px;
+}
+/*发布新贴*/
+.topic-container02 .topic-ranking .new-topic div{
+    height:30px;
+    line-height:30px;
+    width:190px;
+    color: white;
+    border:solid 1px transparent;
+    text-align: center;
+    background-color:#FF6767;
+    margin-bottom: 15px;
+}
+/*排行榜*/
+.topic-ranking h4{
+    margin-left: 10px;
+    color: #FF6767;
+}
+.ranking-word span{
+    font-size: 13px;
+    margin-left: 10px;
+}
+.topic-ranking .row div div span:last-child{
+    margin-left: 10px;
+}
+.topic-ranking .row div div{
+    margin-top: 10px;
+}
+.form-horizontal .form-group .shadow{
+    box-shadow: 2px 4px 6px #D9C9AD;
+    height: 40px;
+}
+.topic-ranking  .span-css{
+    margin-left: 6px;
+}

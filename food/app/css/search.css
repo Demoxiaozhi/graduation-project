@@ -1,0 +1,101 @@
+.search-container{
+    background-color: #F5F5F5;
+    width:100%;
+}
+.search-container01{
+    padding-top: 25px;
+    width:84%;
+}
+.search-head span span[id^=present]{
+    color: #A1AAB2;
+}
+.search-head span span[id^=search_dish_num] {
+    color: red;
+}
+/*search-container02/搜到的具体菜谱*/
+.search-container02{
+    margin-top: 25px;
+    width:84%;
+}
+ /*高级筛选区*/
+.search-container02 .choose-row nav{
+    background-color: white;
+    height:60px;
+    padding-top: 11px;
+}
+.choose-row span:hover{
+    cursor: pointer;
+}
+ /*排序导航*/
+ .dish-sort-title{
+    height:45px;
+     margin-top: 15px;
+    background-color: #E8E8E8;
+}
+.dish-sort-title ul{
+    height:45px;
+    line-height: 45px;
+}
+ .dish-sort-title ul li{
+    margin-left: 5px;
+    padding-left:20px ;
+    padding-right: 20px;
+    border:solid 1px transparent;
+}
+.dish-sort-title ul li:hover{
+    cursor: pointer;
+}
+.search_dish_list{
+    color: red;
+}
+/*显示菜谱区*/
+.search-container02 .thumbnail{
+    padding: 0px;
+    border-radius: 0px;
+}
+.search-container02 .thumbnail p:hover,img:hover{
+    cursor: pointer;
+}
+.search-container02 .thumbnail .caption h5:hover{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.search-container02 .thumbnail p{
+    font-size: 13px;
+}
+.search-container02 .dish-row .thumbnail .caption span{
+   pointer-events: none;
+}
+.search-container02 .thumbnail span img{
+    width:15px;
+    padding-bottom: 2px;
+}
+@media (max-width: 980px){
+    .search-container02 .thumbnail img{
+        width:100%;
+    }
+}
+/*右侧*/
+.new-dish-row,.hot-food{
+    background-color: white;
+}
+/*最新菜谱*/
+.new-dish-row .new-dish{
+    line-height: 25px;
+    margin-top: 10px;
+}
+.new-dish-row .new-dish li{
+    color: #606060;
+}
+.new-dish-row .new-dish li span:last-child{
+   font-size: 12px;
+}
+/*一周人气菜谱排行*/
+.welcome-dish .media img{
+    width:45px;
+}
+.welcome-dish .welcome-dish01,.media-body p{
+    font-size: 13px;
+    color:  #606060;
+}

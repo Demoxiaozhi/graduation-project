@@ -1,0 +1,245 @@
+<div class="con">
+    <div>&nbsp;</div>
+    <!--菜品介绍-->
+    <div class="container-fluid dishDetails-container01" style="min-width: 560px">
+        <div class="row dish-introduce">
+            <!--菜品图片/row-left-->
+            <div class="col-xs-6 col-sm-5 col-md-5 col-lg-4 row-left" style="pointer-events: none">
+                <!--<img src="http://localhost:3009/images/dishPic/{{dishDetails_dish_photo}}" alt="" class="img-responsive">-->
+                <img src="http://localhost:3009/upload_dish_pics/{{dishDetails_dish_photo}}" alt="" class="img-responsive">
+            </div>
+            <!--菜谱情况描述-->
+            <div class="col-xs-6 col-sm-7 col-md-7 col-lg-8 row-right">
+                <div class="row" ng-repeat="part in dishDetails_dish">
+                    <!--photo-->
+                    <div class="col-xs-3 col-sm-3 col-md-4 col-lg-3 menu-photo">
+                        <div>
+                            <img src="http://localhost:3009/images/dishPic/{{part.dish_photo}}" alt=""
+                                 class="img-responsive img-thumbnail">
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="col-xs-5 col-sm-7 col-md-8 col-lg-7">
+                        <div>
+                            <h2 ng-bind="part.dish_name"></h2>
+                            <!--<h2>鲜香味美小馄饨</h2>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1  click-collect">
+                        <act-collect-page></act-collect-page>
+                        <act-thumb-page></act-thumb-page>
+                    </div>
+                </div>
+                <hr style="margin-top: 5px">
+                <!--几个时间-->
+                <div class="row time-row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ul class="list-inline" ng-repeat="part in dishDetails_dish">
+                            <li>
+                                <!--<span style="pointer-events: none"><img src="images/dishDetails/peopleNum.png" alt=""></span>-->
+                                <span style="pointer-events: none">驾驶员:张三</span>
+                                <!--<span id="people_num" ng-bind="part.p_count"></span>-->
+                                <!--<span>人份&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                            </li>
+                            <li>
+                                <!--<span style="pointer-events: none"><img src="images/dishDetails/readyTime.png" alt=""></span>-->
+                                <span style="pointer-events: none">车牌号:123456</span>
+                                <!--<span id="ready_time" ng-bind="part.ready_time"></span>-->
+                                <!--<span></span>-->
+                            </li>
+                            <li>
+                                <!--<span style="pointer-events: none"> <img src="images/dishDetails/makeTime.png" alt=""></span>-->
+                                <span style="pointer-events: none">位置:123</span>
+                                <!--<span id="make_time" ng-bind="part.dish_time"></span>-->
+                                <!--<span></span>-->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--结束几个时间-->
+            </div>
+            <!--结束菜谱情况介绍-->
+        </div>
+    </div>
+    <!--菜谱具体用料-->
+    <div class="container-fluid dishDetails-container02" style="min-width:560px ">
+        <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-8 col-lg-8">
+                <!--故事-->
+                <div class="row stroy-row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p ng-bind="dishDetails_story" style="padding-top: 10px"></p>
+                        <!--具体用料-->
+                        <h3>用料</h3>
+                        <!--主料-->
+                        <div class="main-row row">
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <h5 class="h1">主料</h5>
+                            </div>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                <ul class="list-inline">
+                                    <li ng-repeat="part in dishDetails_main_ing">
+                                        <span id="main_name01" ng-bind="part.main_name"></span>
+                                        <span id="main_num01" ng-bind="part.main_count"></span>&nbsp;&nbsp;&nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <!--辅料-->
+                        <div class="main-row row">
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <h5 class="h2">辅料</h5>
+                            </div>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                <ul class="list-inline">
+                                    <li ng-repeat="part in dishDetails_second_ing">
+                                        <span id="second_name01" ng-bind="part.second_name"></span>
+                                        <span id="second_num01" ng-bind="part.second_count"></span>&nbsp;&nbsp;&nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--结束辅料-->
+                    </div>
+                </div>
+                <div class="row step-row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h4 ng-bind="dishDetails_dish_name+'的做法'"></h4>
+                        <!--步骤-->
+                        <!--1-->
+                        <div class="media" ng-repeat="part in dish_step_one">
+                            <div class="media-left">
+                                <!--<img  src="http://localhost:3009/upload_dish_step_pics/{{part.step_photo}}" alt="" class="media-object img-responsive"  style="pointer-events: none">-->
+                                <img  src="http://localhost:3009/upload_dish_step_pics/{{part.step_photo}}" alt=""   style="pointer-events: none">
+                            </div>
+                            <div class="media-body">
+                                 <span id="step_num01">
+                                     <i>{{$index+1+'.'}}</i>
+                                 </span>
+                                <span id="step01" ng-bind="part.step_content"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--结束具体做法-->
+                <div class="row comment-row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                                <span style="pointer-events: none">
+                                    <img src="http://localhost:3009/uploads/{{dishDetails_user_headphoto}}" alt="">
+                                </span>
+                            </div>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label>发表评论</label>
+                                        <textarea class="form-control" rows="3" ng-model="OneDishComment"></textarea>
+                                    </div>
+                                </form>
+                                <div>
+                                    <button type="button" class="btn btn-danger" ng-click="addOneDishComment()">发表</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--结束评论框-->
+                        <!--评论区-->
+                        <h4>评论</h4>
+                        <hr style="margin-top: 0px">
+                        <!--具体评论-->
+                        <ul class="list-inline" ng-repeat="part in dishDetails_dish_comment | limitTo:number">
+                            <li style="pointer-events: none">
+                                <img src="http://localhost:3009/uploads/{{part.head_photo}}" alt="" >
+                            </li>
+                            <li>
+                                <span id="publish_comment_user01" style="font-size: 13px;" ng-bind="part.user_sname"></span>
+                                <h6 title="评论" id="comment_content01" ng-bind="part.comment_content"></h6>
+                                <span style="color: #898989">
+                                     <span id="publish_comment_time01" ng-bind="part.comment_time | toDate |date :'yyyy-MM-dd HH:mm:ss'"></span>
+                                 </span>
+                            </li>
+                            <hr>
+                        </ul>
+                        <!--结束评论-->
+                    </div>
+                    <div class="dishDetails_more">
+                        <span ng-click="number=number+3">查看更多评论</span>
+                    </div>
+                </div>
+            </div>
+            <!--右侧部分布局-->
+            <div class="col-xs-5 col-sm-5 col-md-4 col-lg-4" style="padding-left: 35px">
+                <!--发布者-->
+                <div class="container-fluid publishUser-row row">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7" style="text-align: center">
+                                    <img ui-sref="master" src="http://localhost:3009/uploads/{{dishDetails_author_headphoto}}" alt="" style="width: 50px;height: 50px;border-radius: 27px">
+                                </div>
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7" style="text-align: center">
+                                    <h5 style="color: red" ng-bind="dishDetails_author_user_sname"></h5>
+                                </div>
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" style="text-align: left">
+                                    <act-focus-page></act-focus-page>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center">
+                                    <span id="details">
+                                         菜谱：<span id="menu_num" ng-bind="dishDetails_author_dish_count"></span>&nbsp;&nbsp;
+                                        /关注：<span id="attention_num" ng-bind="dishDetails_author_focus_count"></span>&nbsp;&nbsp;
+                                        /粉丝：<span id="fans_num" ng-bind="dishDetails_author_fans_count"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--分隔-->
+                <div class="web-row row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="pointer-events: none">
+                        <img src="images/topic/topic-ranking-hr.jpg" alt="" class="img-rounded">
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <h4 style="color: red;">美食杰</h4>
+                        <span style="pointer-events: none">众多精品菜谱</span><br>
+                        <span>你的做饭好帮手</span>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div class="row">
+                        <div class="col-xs-12col-sm-12 col-md-12 col-lg-12">
+                            <div   style="border-top: dashed 1px rgba(255,0,0,0.17);">
+                                <span>&nbsp;</span><br>
+                              <span style="margin-left: 20px;">大量菜谱，点击
+                                  <span style="color: rgba(255,0,0,0.68);text-decoration: underline" class="hand" ui-sref="menu">更多</span>
+                                  进行了解</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--排行榜-->
+                <div class="ranking-row row">
+                    <div style="background-color: rgba(191,191,191,0.45);margin-top: -10px;height: 40px;">
+                        <h5><b>美食菜谱推荐</b></h5>
+                    </div>
+                    <div class="dish_tui_j" ng-repeat="part in parts_month_jian">
+                        <ul class="list-unstyled">
+                            <li>
+                                <img src="http://localhost:3009/images/dishPic/{{part.dish_photo}}" alt="" class="hand">
+                                <h5 ui-sref="dishDetails"  style="display: inline" class="hand" ng-bind="part.dish_name" ng-click="dish_tui_details(part.dish_id)" class="hand"></h5>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--结束菜谱排行榜-->
+            </div>
+            <!--结束右侧广告-->
+        </div>
+    </div>
+    <!--结束stroy-->
+</div>

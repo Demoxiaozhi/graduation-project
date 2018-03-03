@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div class="message_bigdiv">
+    <div class="message_contdiv">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_tittop">
+                    <h3 class="font-fam">修改个人资料</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid message_top line">
+            <div class="row ">
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <span class="glyphicon glyphicon-arrow-left hand" style="font-size: 30px ;color:#E2E2E2 ;padding-top: 20px" ui-sref="space" aria-hidden="true"></span>
+                </div>
+                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11" id="personMessage">
+                    <ul class="nav nav-pills">
+                        <li role="presentation" id="editPM" class="nav-color" style="padding-left: 0px" ng-click="chooseData()">编辑个人资料</li>
+                        <!--<li role="presentation" ng-click="chooseEditData()">编辑个人资料</li>-->
+                        <li role="presentation" ng-click="choosePhoto()">修改头像</li>
+                        <li role="presentation" ng-click="choosePass()">修改密码</li>
+                        <li role="presentation" ng-click="chooseTel()">手机设置</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <message-choose-page></message-choose-page>
+    </div>
+</div>

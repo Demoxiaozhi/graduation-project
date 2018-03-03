@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<div class="topicRelease_bigdiv">
+
+    <!--模态框-->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModals">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="font-size: 14px" ng-bind="warnRelease"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-primary">确定</button>-->
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--结束模态框-->
+
+    <div class="topicRelease_contdiv">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 topicRelease_tit_top">
+                    <h4>话题 > 发布新话题</h4>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid topicRelease">
+            <div class="container-fluid">
+                <div class="row" style="padding-top: 20px">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <span style="font-size: 18px;font-weight: 800">标题</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <select name="gender" class="topicRelease_title_select" id="topicRelease_type" ng-blur="topic_type()">
+                            <option value="0">话题类型</option>
+                            <option value="1">烘焙圈</option>
+                            <option value="2">饮食健康</option>
+                            <option value="3">妈妈派</option>
+                            <option value="4">美好时光</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                        <input type="text" placeholder="请填写标题" class="topicRelease_text" ng-model="topic_name" ng-blur="topic_names()" >
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row" style="padding-top: 20px">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <span style="font-size: 18px;font-weight: 800">内容</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class=" col-md-12 col-lg-12" style="margin-top: 20px">
+                        <div ng-model="text1" id="txt" contenteditable="true" ng-blur="text_txt()" class="topicRelease_input">
+                            <img ng-repeat="a in data" ngf-src="a"  class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row" style="padding-left: 16px">
+                    <div class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                        <div class="topicRelease_input_pic" ngf-select="" ngf-pattern="'image/*'" ngf-multiple="true" ng-model="data" >
+                            选择图片
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                        <div class="topicRelease_input_pic" ng-click="add_topic_one()" type="button">发布</div>
+                        <!--<div class="btn1 hand" style="font-size: 20px" ng-click="add_topic()">发布</div>-->
+                        <!--<div class="btn1 hand" style="font-size: 20px" ng-click="fabu()">发布</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+    </div>
+</div>

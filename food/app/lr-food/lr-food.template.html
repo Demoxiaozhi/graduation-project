@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<div ng-switch on="isLogin">
+    <div ng-switch-default>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 login" id="login">
+            <span class="lr hand" ui-sref="regist">注册</span> &nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="lr hand" ui-sref="login">登录</span>
+        </div>
+    </div>
+    <div ng-switch-when="true">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 login">
+            <image ngf-src='data.image' style="width: 50px;height: 50px;position: relative;z-index: 300" class="img-circle" ng-click="clickIcon()">&nbsp;&nbsp;</image>
+            <!--<span ng-bind="user_sname"></span>-->
+            <div class="icon-detail" id="icon-detail"
+                 style="background-color:white;margin-top: -60px;padding-bottom: 10px;z-index: 200;position: relative">
+                <div style="height: 70px"></div>
+                <div class="list-group" style="width: 130px;margin: auto">
+                    <a href="#" class="list-group-item" ui-sref="topicRelease" ng-click="clickIcon()" style="background-color:red;color: white">发布话题</a>
+                    <a href="#" class="list-group-item" ui-sref="dishRelease" ng-click="clickIcon()">发布菜谱</a>
+                    <a href="#" class="list-group-item" ui-sref="space" ng-click="clickIcon()">我的美食空间</a>
+                    <a href="#" class="list-group-item" ng-click="lOut()" >退出登录</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div ng-switch-when="false">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 login">
+            <span class="lr hand" ui-sref="regist">注册</span> &nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="lr hand" ui-sref="login">登录</span>
+        </div>
+    </div>
+</div>

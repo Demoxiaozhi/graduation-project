@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<div class=" article-div">
+    <div class="article-div-div">
+            <div>
+                <h3 class="nl_title">
+                    <span class="nl_t_left"></span>
+                    注册冷链物流系统
+                    <span class="nl_t_right"></span>
+                </h3>
+            </div>
+            <form action="/users/register" method="post" class="form-horizontal" id="regist_form">
+                 <div class="login_regist_div">
+                     <p class="mt5 mb20">注册你的账户</p>
+                     <input name="username" type="text" class="form-control uname" style="height: 46px" placeholder="请输入用户名" ng-blur="rcheckPhone()" ng-model="name"/>
+                     <div class="text-danger" id="text-tegist-rname" ng-bind="rnameWarning"></div>
+                     <input name="password" type="password" class="form-control pword" style="height: 46px" placeholder="请输入密码" ng-blur="rcheckPassword()" ng-model="rpassword"/>
+                     <div class="text-danger" ng-bind="rpasswordWarning"></div>
+                     <input name="re_password" type="password" class="form-control pword" style="height: 46px" placeholder="请确认密码" ng-blur="checkPassword02()" ng-model="rspassword"/>
+                     <div class="text-danger" ng-bind="rspasswordWarning"> </div>
+                     <br>
+                     <div class="container-fluid" style="height: 43px">
+                         <div class="row">
+                             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 registBtn hand" ng-click="regist()">注册</div>
+                             <div ui-sref="login" class="col-xs-9 col-sm-9 col-md-9 col-lg-9 on_go">已有账号？马上登陆 ∧</div>
+                         </div>
+                     </div>
+                 </div>
+            </form>
+    </div>
+</div>
+

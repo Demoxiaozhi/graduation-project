@@ -1,0 +1,303 @@
+
+<div ng-switch on="isMessage">
+    <!--模态框-->
+    <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal-->
+    <!--</button>-->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3" style="font-size: 20px">修改成功！</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div type="button" class="btn btn-default" data-dismiss="modal">Close</div>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--结束模态框-->
+    <!--当个人信息页是默认时，编辑个人信息-->
+    <div ng-switch-default>
+        <div class="container-fluid message_middle">
+            <ul class="useredit_ul clearfix">
+                <li>
+                    <dl class="clearfix hand">
+                        <span>昵称：</span>
+                        <input type="text" class="text hand" id="text" name="user_sname"  autocomplete="off" style="padding-left: 6px">
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <span>性别：</span>
+                        <select name="sex" id="sex" class="hand">
+                            <option  value="-1">请选择</option>
+                            <option  value="0">男</option>
+                            <option value="1">女</option>
+                        </select>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <span>生日：</span>
+                        <select name="brithday_year" id="year" class="hand">
+                            <option value="0">请选择</option>
+                            <option value="2017">2017年</option>
+                            <option value="2016">2016年</option>
+                            <option value="2015">2015年</option>
+                            <option value="2014">2014年</option>
+                            <option value="2013">2013年</option>
+                            <option value="2012">2012年</option>
+                            <option value="2011">2011年</option>
+                            <option value="2010">2010年</option>
+                            <option value="2009">2009年</option>
+                            <option value="2008">2008年</option>
+                            <option value="2007">2007年</option>
+                            <option value="2006">2006年</option>
+                            <option value="2005">2005年</option>
+                            <option value="2004">2004年</option>
+                            <option value="2003">2003年</option>
+                            <option value="2002">2002年</option>
+                            <option value="2001">2001年</option>
+                            <option value="2000">2000年</option>
+                            <option value="1999">1999年</option>
+                            <option value="1998">1998年</option>
+                            <option value="1997">1997年</option>
+                            <option value="1996">1996年</option>
+                            <option value="1995">1995年</option>
+                            <option value="1994">1994年</option>
+                            <option value="1993">1993年</option>
+                            <option value="1992">1992年</option>
+                            <option value="1991">1991年</option>
+                            <option value="1990">1990年</option>
+                            <option value="1989">1989年</option>
+                            <option value="1988">1988年</option>
+                            <option value="1987">1987年</option>
+                            <option value="1986">1986年</option>
+                            <option value="1985">1985年</option>
+                            <option value="1984">1984年</option>
+                            <option value="1983">1983年</option>
+                            <option value="1982">1982年</option>
+                            <option value="1981">1981年</option>
+                            <option value="1980">1980年</option>
+                            <option value="1979">1979年</option>
+                            <option value="1978">1978年</option>
+                            <option value="1977">1977年</option>
+                            <option value="1976">1976年</option>
+                            <option value="1975">1975年</option>
+                            <option value="1974">1974年</option>
+                            <option value="1973">1973年</option>
+                            <option value="1972">1972年</option>
+                            <option value="1971">1971年</option>
+                            <option value="1970">1970年</option>
+                            <option value="1969">1969年</option>
+                            <option value="1968">1968年</option>
+                            <option value="1967">1967年</option>
+                            <option value="1966">1966年</option>
+                            <option value="1965">1965年</option>
+                            <option value="1964">1964年</option>
+                            <option value="1963">1963年</option>
+                            <option value="1962">1962年</option>
+                            <option value="1961">1961年</option>
+                            <option value="1960">1960年</option>
+                            <option value="1959">1959年</option>
+                            <option value="1958">1958年</option>
+                            <option value="1957">1957年</option>
+                            <option value="1956">1956年</option>
+                            <option value="1955">1955年</option>
+                            <option value="1954">1954年</option>
+                            <option value="1953">1953年</option>
+                            <option value="1952">1952年</option>
+                            <option value="1951">1951年</option>
+                            <option value="1950">1950年</option>
+                            <option value="1949">1949年</option>
+                            <option value="1948">1948年</option>
+                            <option value="1947">1947年</option>
+                            <option value="1946">1946年</option>
+                            <option value="1945">1945年</option>
+                            <option value="1944">1944年</option>
+                            <option value="1943">1943年</option>
+                            <option value="1942">1942年</option>
+                            <option value="1941">1941年</option>
+                            <option value="1940">1940年</option>
+                            <option value="1939">1939年</option>
+                            <option value="1938">1938年</option>
+                            <option value="1937">1937年</option>
+                            <option value="1936">1936年</option>
+                            <option value="1935">1935年</option>
+                            <option value="1934">1934年</option>
+                            <option value="1933">1933年</option>
+                            <option value="1932">1932年</option>
+                            <option value="1931">1931年</option>
+                            <option value="1930">1930年</option>
+                            <option value="1929">1929年</option>
+                            <option value="1928">1928年</option>
+                            <option value="1927">1927年</option>
+                            <option value="1926">1926年</option>
+                            <option value="1925">1925年</option>
+                            <option value="1924">1924年</option>
+                            <option value="1923">1923年</option>
+                            <option value="1922">1922年</option>
+                            <option value="1921">1921年</option>
+                            <option value="1920">1920年</option>
+                        </select>
+                        <select name="brithday_month" id="month" class="hand">
+                            <option value="0">请选择</option>
+                            <option value="01">1月</option>
+                            <option value="02">2月</option>
+                            <option value="03">3月</option>
+                            <option value="04">4月</option>
+                            <option value="05">5月</option>
+                            <option value="06">6月</option>
+                            <option value="07">7月</option>
+                            <option value="08">8月</option>
+                            <option value="09">9月</option>
+                            <option value="10">10月</option>
+                            <option value="11">11月</option>
+                            <option value="12">12月</option>
+                        </select>
+                        <select name="brithday_day" id="day" class="hand">
+                            <option value="0">请选择</option>
+                            <option value="01">1日</option>
+                            <option value="02">2日</option>
+                            <option value="03">3日</option>
+                            <option value="04">4日</option>
+                            <option value="05">5日</option>
+                            <option value="06">6日</option>
+                            <option value="07">7日</option>
+                            <option value="08">8日</option>
+                            <option value="09">9日</option>
+                            <option value="10">10日</option>
+                            <option value="11">11日</option>
+                            <option value="12">12日</option>
+                            <option value="13">13日</option>
+                            <option value="14">14日</option>
+                            <option value="15">15日</option>
+                            <option value="16">16日</option>
+                            <option value="17">17日</option>
+                            <option value="18">18日</option>
+                            <option value="19">19日</option>
+                            <option value="20">20日</option>
+                            <option value="21">21日</option>
+                            <option value="22">22日</option>
+                            <option value="23">23日</option>
+                            <option value="24">24日</option>
+                            <option value="25">25日</option>
+                            <option value="26">26日</option>
+                            <option value="27">27日</option>
+                            <option value="28">28日</option>
+                            <option value="29">29日</option>
+                            <option value="30">30日</option>
+                            <option value="31">31日</option>
+                        </select>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <span>住址：</span>
+                        <select name="province" id="local_province" class="hand">
+                            <option value="0"  class="selcted">请选择省份</option>
+                            <option value="jiangsu">江苏</option>
+                            <option value="henan">河南</option>
+                        </select>
+                        <select name="city" id="local_city" class="hand">
+                            <option value="" >请选择城市</option>
+                        </select>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <span>签名：</span>
+                        <textarea class="textarea1 hand" id="sign" name="sign" style="width: 340px;height: 170px ;padding-left: 6px" ></textarea>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <button type="button" style="margin-left: 46px" id="#messageBtn" class="submit">提交</button>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--修改个人头像-->
+    <div ng-switch-when="photoMessage">
+        <div class="container-fluid message_middle" style="padding-bottom: 40px" >
+            <ul class="useredit_ul clearfix">
+                <!--<li>-->
+                    <!--<img src="http://localhost:3009/uploads/{{uicon}}" alt="">-->
+                <!--</li>-->
+                <li class="clearfix">
+                    <img ngf-src="data.file || data.defaultImage"  class="img-responsive" style="width: 180px;max-width:500px;"  alt="">
+                </li>
+                <li class="clearfix">
+
+                    <div class="photo-btn button hand"  ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false" ng-model="data.file">
+                        更改头像
+                    </div>
+                    <div class="photo-btn hand" ng-click="upload()">上传头像</div>
+                    <!--<div class="photo-btn" ng-click="hello()">当前头像</div>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--修改密码-->
+    <div ng-switch-when="passwordMessage">
+            <div class="container-fluid message_middle">
+                <ul class="useredit_ul clearfix">
+                    <li class="clearfix">
+                        <span style="padding-left: 14px">旧密码：</span>
+                        <input type="password" class="text password-text"  autocomplete="off" id="old_pass" ng-model="old_password" >
+                    </li>
+                    <li class="clearfix">
+                        <span style="padding-left: 14px">新密码：</span>
+                        <input type="password" class="text password-text"  autocomplete="off" id="new_pass" ng-model="new_password">
+                    </li>
+                    <li class="clearfix">
+                        <span>确认密码：</span>
+                        <input type="password" class="text password-text" autocomplete="off" id="rnew_pass" ng-model="rnew_password">
+                    </li>
+                    <li class="clearfix">
+                        <div class="text-danger" style="padding-left: 70px;padding-bottom: 6px" ng-bind="warningPass"></div>
+                    </li>
+                    <li class="clearfix">
+                        <input type="button" ng-click="updatePasswordBtn(old_password,new_password,rnew_password)" style="margin-left: 74px;margin-bottom: 10px" value="提交" class="submit">
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+    <!--修改手机号码-->
+    <div ng-switch-when="phoneMessage">
+        <div class="container-fluid message_middle">
+            <ul class="useredit_ul clearfix">
+                <li class="clearfix">
+                    <span style="padding-left: 14px">旧手机号码：</span>
+                    <input type="text" class="text password-text"  autocomplete="off">
+                </li>
+                <li class="clearfix">
+                    <span style="padding-left: 14px">新手机号码：</span>
+                    <input type="text" class="text password-text"  autocomplete="off">
+                </li>
+                <li class="clearfix">
+                    <span>确认手机号码：</span>
+                    <input type="text" class="text password-text"  autocomplete="off">
+                </li>
+                <li class="clearfix">
+                    <input type="submit" style="margin-left: 102px;margin-bottom: 10px" value="提交" class="submit">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>

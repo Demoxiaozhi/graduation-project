@@ -1,0 +1,76 @@
+.article-div {
+    /*background-color: #FAE8C8;*/
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.article-div-div {
+    /*background-color: white;*/
+    background-color: #7cb3b9;
+    border-radius: 8px;
+    min-width: 500px;
+    width: 76%;
+    margin: auto;
+    /*padding-top: 100px;*/
+    padding-top: 50px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.nl_title {
+    height: 10px;
+    line-height: 42px;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin: 40px auto;
+}
+.nl_title .nl_t_left {
+    display: inline-block;
+    vertical-align: top;
+    width: 91px;
+    height: 9px;
+    margin-top: 17px;
+    background: url(../images/login_regist/title_left.png) center no-repeat;
+    margin-right: 20px;
+}
+.nl_title .nl_t_right {
+    display: inline-block;
+    vertical-align: top;
+    width: 91px;
+    height: 9px;
+    margin-top: 17px;
+    background: url(../images/login_regist/title_right.png) center no-repeat;
+    margin-left: 20px;
+}
+.login_regist_div{
+    width: 360px;
+    margin: auto;
+}
+.registBtn{
+    width: 60px;
+    height:40px;
+    line-height: 40px;
+    /*margin: auto;*/
+    margin-right: auto;
+    font-size: 18px;
+    color:white;
+    border-radius: 5px;
+    text-align: center;
+    /*background-color: #EC5541;*/
+    background-color: #0F769F;
+}
+.registBtn:hover{
+    background-color: #0f97cd;
+}
+.on_go{
+    /*padding-top: 20px;*/
+    line-height: 50px;
+    text-align: right;
+}
+.on_go:hover{
+    /*color: #EC5541;*/
+    color: #0F769F;
+    cursor: pointer;
+    text-decoration: underline;
+}

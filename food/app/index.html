@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food</title>
+    <link rel="stylesheet" href="js/ngImgCrop/compile/minified/ng-img-crop.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--swiper-->
+    <!--<link rel="stylesheet" href="js/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/fv.css">
+    <link rel="stylesheet" href="css/topic.css">
+    <link rel="stylesheet" href="css/space.css">
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/topicDetails.css">
+    <link rel="stylesheet" href="css/dishRelease.css">
+    <link rel="stylesheet" href="css/dishDetails.css">
+    <link rel="stylesheet" href="css/topicRelease.css">
+    <link rel="stylesheet" href="css/person.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/about.css">
+
+
+    <!--<script src="../js/angular.js"></script>-->
+    <!--<script src="../js/angular-ui-router.js"></script>-->
+    <link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.css">
+    <script src="js/jquery/dist/jquery.min.js"></script>
+    <script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+
+    <!--<script src="js/swiper/swiper.min.js"></script>-->
+
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="app.filter.js"></script>
+    <!--导入service 服务-->
+    <script src="service/service.module.js"></script>
+    <!--导入public模块-->
+    <script src="service/public/public.module.js"></script>
+    <!--导入user模块-->
+    <script src="service/user/user.module.js"></script>
+    <script src="service/user/user.service.js"></script>
+    <!--导入getUserIcon模块-->
+    <script src="service/getUserIcon/getUserIcon.module.js"></script>
+    <script src="service/getUserIcon/getUserIcon.service.js"></script>
+    <!--导入导航模块-->
+    <script src="nav-food/nav-food.module.js"></script>
+    <script src="nav-food/nav-food.directive.js"></script>
+    <!--导入页脚模块-->
+    <script src="footer-food/footer-food.module.js"></script>
+    <script src="footer-food/footer-food.directive.js"></script>
+    <!--导入页头模块-->
+    <script src="header-food/header-food.module.js"></script>
+    <script src="header-food/header-food.directive.js"></script>
+    <!--导入关于模块-->
+    <script src="about-food/about-food.module.js"></script>
+    <script src="about-food/about-food.directive.js"></script>
+    <!--导入登录模块-->
+    <script src="login-food/login-food.module.js"></script>
+    <script src="login-food/login-food.directive.js"></script>
+    <!--导入注册模块-->
+    <script src="regist-food/regist-food.module.js"></script>
+    <script src="regist-food/regist-food.directive.js"></script>
+    <!--导入登录注册可变模块-->
+    <script src="lr-food/lr-food.module.js"></script>
+    <script src="lr-food/lr-food.directive.js"></script>
+    <!--导入首页模块-->
+    <script src="index-food/index-food.module.js"></script>
+    <script src="index-food/index-food.directive.js"></script>
+    <!--导入菜谱大全模块-->
+    <script src="menu-food/menu-food.module.js"></script>
+    <script src="menu-food/menu-food.directive.js"></script>
+    <!--导入食材详情模块-->
+    <script src="fv-food/fv-food.module.js"></script>
+    <script src="fv-food/fv-food.directive.js"></script>
+    <!--导入话题模块-->
+    <script src="topic-food/topic-food.module.js"></script>
+    <script src="topic-food/topic-food.directive.js"></script>
+    <!--导入个人美食空间模块-->
+    <script src="space-food/space-food.module.js"></script>
+    <script src="space-food/space-food.directive.js"></script>
+    <!--导入达人美食空间模块-->
+    <script src="master-food/master-food.module.js"></script>
+    <script src="master-food/master-food.directive.js"></script>
+    <!--导入个人信息模块-->
+    <script src="message-food/message-food.module.js"></script>
+    <script src="message-food/message-food.directive.js"></script>
+    <!--导入个人信息修改模块-->
+    <script src="messageChoose-food/messageChoose-food.module.js"></script>
+    <script src="messageChoose-food/messageChoose-food.directive.js"></script>
+    <!--导入图片上传模块-->
+    <script src="js/ng-file-upload-shim/ng-file-upload-shim.js"></script>
+    <script src="js/ng-file-upload/ng-file-upload.js"></script>
+    <!--导入话题详情模块-->
+    <script src="topicDetails-food/topicDetails-food.module.js"></script>
+    <script src="topicDetails-food/topicDetails-food.directive.js"></script>
+    <!--导入发布菜谱模块-->
+    <script src="dishRelease-food/dishRelease-food.module.js"></script>
+    <script src="dishRelease-food/dishRelease-food.directive.js"></script>
+    <!--导入发布话题模块-->
+    <script src="topicRelease-food/topicRelease-food.module.js"></script>
+    <script src="topicRelease-food/topicRelease-food.directive.js"></script>
+    <!--导入菜品详情模块-->
+    <script src="dishDetails-food/dishDetails-food.module.js"></script>
+    <script src="dishDetails-food/dishDetails-food.directive.js"></script>
+    <!--导入美食达人模块-->
+    <script src="person-food/person-food.module.js"></script>
+    <script src="person-food/person-food.directive.js"></script>
+    <!--导入搜索跳转模块-->
+    <script src="search-food/search-food.module.js"></script>
+    <script src="search-food/search-food.directive.js"></script>
+    <!--导入图片剪切模块-->
+    <script src="js/ngImgCrop/compile/minified/ng-img-crop.js"></script>
+    <!--导入话题中的轮播模块-->
+
+    <!--导入判断菜品与话题是否点赞与收藏-->
+    <script src="service/getPerActMes/getPerActMes.module.js"></script>
+    <script src="service/getPerActMes/getPerActMes.factory.js"></script>
+    <!--导入菜品详情页点赞模块-->
+    <script src="ActThumb/ActThumb.module.js"></script>
+    <script src="ActThumb/ActThumb.directive.js"></script>
+    <script src="service/actThumb/actThumb.module.js"></script>
+    <script src="service/actThumb/actThumb.factory.js"></script>
+    <!--导入话题详情页点赞模块-->
+    <script src="ActTopicThumb/ActTopicThumb.module.js"></script>
+    <script src="ActTopicThumb/ActTopicThumb.directive.js"></script>
+    <!--导入菜品详情页收藏模块-->
+    <script src="ActCollect/ActCollect.module.js"></script>
+    <script src="ActCollect/ActCollect.directive.js"></script>
+    <script src="service/actCollect/actCollect.module.js"></script>
+    <script src="service/actCollect/actCollect.factory.js"></script>
+    <!--导入话题详情页收藏模块-->
+    <script src="ActTopicCollect/ActTopicCollect.module.js"></script>
+    <script src="ActTopicCollect/ActTopicCollect.directive.js"></script>
+    <!--导入菜品详情页关注模块-->
+    <script src="ActFocus/ActFocus.module.js"></script>
+    <script src="ActFocus/ActFocus.directive.js"></script>
+    <script src="service/actFocus/actFocus.module.js"></script>
+    <script src="service/actFocus/actFocus.factory.js"></script>
+    <!--导入判断菜品详情页菜品作者是否关注-->
+    <script src="service/getFocusAct/getFocusAct.module.js"></script>
+    <script src="service/getFocusAct/getFocusAct.factory.js"></script>
+    <!--导入话题显示模块-->
+    <script src="service/getArtMes/getArt.module.js"></script>
+    <script src="service/getArtMes/getArt.factory.js"></script>
+    <script src="js/angular/angular-sanitize.js"></script>
+
+
+</head>
+<body ng-app="food" style="background-color: white">
+<!--页头部分-->
+<header class="container-fluid bg-header" id="top">
+    <div class="row">
+        <header-page></header-page>
+    </div>
+</header>
+<!--导航部分-->
+<div class="container-fluid nav-div">
+    <div class="row ">
+        <nav-page></nav-page>
+    </div>
+</div>
+<!--可变区域-->
+<div class="container-fluid" >
+    <div ui-view class="row">
+
+    </div>
+</div>
+<!--页脚部分-->
+<div class="container-fluid">
+    <nav class="row">
+        <footer-page></footer-page>
+    </nav>
+</div>
+</body>
+</html>

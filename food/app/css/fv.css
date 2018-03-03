@@ -1,0 +1,40 @@
+.fv_food_big_div{
+    width: 100%;
+    background-color: #FAE8C8;
+}
+.fv_food_cont_div{
+    width: 76%;
+    margin: auto;
+}
+.fv_food_cont_tit_top{
+    text-align: left;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.fv_food_middle {
+    height: 210px;
+    background-color: #FFFFFF;
+}
+.fv_food_middle div{
+    height: 100%;
+}
+.fv_food_middle img{
+    width: 90%;
+    height: 100%;
+}
+.fv_food_name div{
+    width: 100%;
+    height: 30%;
+}
+.fv_food_name h5{
+    display: inline-block;
+}
+.fv_food_photo img{
+    width: 100%;
+    height: 70%;
+}
+.fv_food_cont_tit_middle{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

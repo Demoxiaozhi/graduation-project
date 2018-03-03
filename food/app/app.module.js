@@ -1,0 +1,33 @@
+angular.module('food', [
+    'ui.router',
+    'navFood',
+    'headerFood',
+    'registFood',
+    'loginFood',
+    'indexFood',
+    'menuFood',
+    'footerFood',
+    'fvFood',
+    'topicFood',
+    'spaceFood',
+    'messageFood',
+    'serviceFood',
+    'ngFileUpload',
+    'topicDetailsFood',
+    'dishReleaseFood',
+    'dishDetailsFood',
+    'topicReleaseFood',
+    'personFood',
+    'searchFood',
+    'ActThumb',
+    'ActCollect',
+    'getPerActMes',
+    'ngSanitize',
+    'ActTopicThumb',
+    'ActTopicCollect',
+    'ActFocus',
+    'masterFood',
+    'aboutFood'
+
+
+]);

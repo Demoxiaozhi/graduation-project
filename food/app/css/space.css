@@ -1,0 +1,244 @@
+/*最大父容器*/
+.space-container{
+    background-color: #FAE8C8;
+    width:100%;
+    padding-bottom: 50px;
+}
+/*编辑资料矩形框/contain-div01*/
+.contain-div01{
+    width:73%;
+    margin-top: 25px;
+    background-color: white;
+}
+/*头像*/
+.contain-div01 .row-left .row img{
+    max-height: 210px;
+}
+@media (max-width: 1200px){
+    .contain-div01 .row-left .row img{
+        height: auto;
+    }
+}
+@media(max-width: 800px){
+    .contain-div01 .row-left .row img{
+        height: auto;
+        width:100%;
+     }
+}
+@media (min-width: 980px) and (max-width: 1230px) {
+    .row-middle{
+        margin-left: -20px;
+    }
+}
+/*row-middle/文字编辑资料*/
+.row-middle .span:hover{
+    color:#EC5541;
+}
+.row-middle-div {
+    margin-top: 25px;
+}
+.li1{
+    height: 81px;
+    width: 81px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 32px;
+    color: #A499A4;
+    border-bottom-right-radius: 0;
+    /*border:solid 3px #F5F5F5;*/
+    /*background-color: #F8F8F8;*/
+    border:solid 3px #eaeaea;
+    background-color: #f0f0f0;
+}
+.li1:hover{
+    background-color: red;
+    color: white;
+}
+.li2{
+    height: 81px;
+    width: 81px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 32px;
+    color: #A499A4;
+    border-bottom-left-radius: 0;
+    /*border:solid 3px #dcdcdc;*/
+    /*background-color: #eaeaea;*/
+    border:solid 3px #eaeaea;
+    background-color: #f0f0f0;
+    margin-left: 12px;
+}
+.li2:hover{
+    background-color: red;
+    color: white;
+}
+.li3{
+    height: 81px;
+    width: 81px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 32px;
+    color: #A499A4;
+    border-top-right-radius: 0;
+    /*border:solid 3px #F5F5F5;*/
+    margin-top: 14px;
+    /*background-color: #F8F8F8;*/
+    border:solid 3px #eaeaea;
+    background-color: #f0f0f0;
+}
+.li3:hover{
+    background-color: red;
+    color: white;
+}
+.li4{
+    height: 81px;
+    width: 81px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 32px;
+    color: #A499A4;
+    border-top-left-radius: 0;
+    /*border:solid 3px #F5F5F5;*/
+    margin-top: 14px;
+    /*background-color: #F8F8F8;*/
+    margin-left: 12px;
+    border:solid 3px #eaeaea;
+    background-color: #f0f0f0;
+}
+.li4:hover{
+    background-color: red;
+    color: white;
+}
+.row-middle-div li h4{
+    color: red;
+    padding-left: 5px;
+}
+.row-middle-div li h4:hover{
+    color: white;
+}
+@media (max-width: 830px){
+    .row-middle-div {
+        margin-top:12px;
+    }
+    .li1,.li2,.li3,.li4{
+        width:67px;
+        height:67px;
+        font-size: 12px;
+    }
+}
+/*水平线*/
+.row-middle hr{
+    margin-left:0px;
+    margin-right:0px;
+}
+/*动态等标签/contain-div02*/
+.contain-div02{
+    margin-top: 35px;
+    width:73%;
+}
+/*详情区*/
+.contain-div03{
+    width:73%;
+    margin-top: 25px;
+    background-color: #FAFAFA;
+}
+.contain-div03 .row-top{
+    height:auto;
+    font-size: 15px;
+    background-color: white;
+}
+.contain-div03 .btn{
+    background-color:  #e6e6e6;
+}
+/*两个发布*/
+.contain-div03 .row-div{
+    height:30px;
+    line-height:30px;
+    margin-top: 10px;
+    color: white;
+    border:solid 1px transparent;
+    border-radius: 3px;
+    width: 100px;
+    text-align: center;
+    background-color:#EC5541;
+}
+/*end*/
+.contain-div03 .row-bottom{
+    line-height: 300px;
+    text-align: center;
+}
+.content-topic{
+    padding-left: 80px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.person-check{
+    color: red;
+}
+/* 下拉按钮样式 */
+.dropbtn {
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #FAE8C8;
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* 下拉菜单的链接 */
+.dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content span:hover {
+    background-color: #f1f1f1
+}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.dropdown:hover .dropbtn {
+   /*color: #CD0C11;*/
+   color:red;
+}
+.contain-div03 .publish-img img{
+    width:100%;
+}
+.whilenull{
+    line-height: 300px;
+    text-align: center;
+}
+.cancel-collect-btn{
+    padding-top: 260px
+}
+.cancel-collect-btn a{
+    color: #A499A4;
+}
+.cancel-collect-btn a:hover{
+    /*text-decoration: none;*/
+    color: red;
+}

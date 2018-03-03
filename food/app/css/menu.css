@@ -1,0 +1,128 @@
+.menu-container{
+    background-color: #FAE8C8;
+    width:100%;
+}
+/*菜分类/first_row_contain*/
+.container-css01{
+    width:74%;
+    background-color: #FFFFFF;
+}
+/*调整导航/大概分类*/
+.container-fluid .col-css01{
+    padding:0px;
+    min-height:45px;
+}
+.container-css01 .nav-title{
+    background-color: #FDF4E4;
+    font-weight: 600;
+    font-size: 14px;
+}
+.container-css01 .nav-title .nav-big-title{
+    height:100%;
+    margin-left: 10px;
+    line-height: 45px;
+}
+.nav-title .nav-big-title li {
+    border:solid 1px transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.nav-title .nav-big-title li.active {
+    color: red;
+    pointer-events: none;
+}
+.nav-title .nav-big-title li:hover {
+    color: red;
+    border: solid 1px transparent;
+    background-color: #FDF9F1;
+    cursor:pointer ;
+}
+/*分隔*/
+.col-css01 h3{
+    margin-left: 15px;
+}
+.container-css01 hr{
+    margin-top:0px;
+}
+/*家常菜详细分类列表*/
+.container-css01 .nav-child-title .nav-small-title{
+    text-align: center;
+    margin-left: 10px;
+}
+.container-css01 .nav-child-title li{
+    border:solid 1px transparent;
+    font-size: 13px;
+}
+.container-css01 .nav-child-title li.active{
+    border:solid 1px transparent;
+    background-color: red;
+    color: white;
+    cursor:default;
+}
+.container-css01 .nav-child-title li:hover{
+    cursor: pointer;
+    border:solid 1px transparent;
+    background-color: red;
+    color: white;
+}
+/*文字区（印象）/container-css02*/
+.container-css02{
+    width:74%;
+    text-align: center;
+    margin-top: 45px;
+}
+.container-css02 .row .col-css02{
+    font-size: 21px;
+    font-weight: 500;
+}
+/*最新/最热*/
+.col-css03{
+    text-align: right;
+    font-size:13px ;
+    padding-top:5px;
+}
+.col-css03 span.active{
+    color: red;
+}
+.col-css03  span:hover{
+     color: red;
+    cursor: pointer;
+ }
+/*/菜品图片/container-css03*/
+.container-css03{
+    width:76%;
+    margin-top: 25px;
+}
+.container-css03 .thumbnail{
+    border:none;
+    border-radius: 0px;
+    padding: 0px;
+}
+.row-third-contain01{
+    margin-top: 20px;
+}
+.row-third-contain01 .dish-title:hover{
+   color:red;
+}
+
+.caption span{
+    color: #8d8d8d;
+}
+.caption p{
+    color: red;
+    padding-top: 6px;
+}
+@media (max-width: 980px){
+    .container-css03 .thumbnail img{
+        width:100%;
+    }
+}
+/*分页/container-css04*/
+.container-css04{
+    width:70%;
+}
+.container-css04 .row{
+    text-align: center;
+}
