@@ -20,6 +20,12 @@ directive('indexPage',function () {
                 });
             });
 
+            //冷链物流系统冷藏车
+            $http.get('http://localhost:3009/dish-food/getDishFood')
+                .then(function successCallback(response) {
+                    $scope.index_cars=(response.data.result).slice(0,8);
+                });
+
             $scope.fv_type=['水果','蔬菜'];
             $scope.conditions={
                 _fv_type:0,
